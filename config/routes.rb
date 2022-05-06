@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :picture
+  resources :pictures
   resources :sessions
   resources :users
 end
