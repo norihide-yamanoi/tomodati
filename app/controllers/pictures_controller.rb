@@ -13,6 +13,7 @@ class PicturesController < ApplicationController
       redirect_to picture_path, notice: "作成しました！"
     else
       render :new
+    end  
   end
 
 def show
