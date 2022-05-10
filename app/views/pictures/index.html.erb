@@ -8,8 +8,8 @@
   </tr>
 
 <% @pictures.each do |picture| %>
-  <tr>
-    <td><%= picture.image %></td>
+  <tr class="main">
+    <td><%= image_tag(picture.image.url) if picture.image && picture.image.url %></td>
     <td><%= picture.content %></td>
     <td><%= picture.user.name %></td>
 
@@ -20,4 +20,6 @@
 <% end %>
 </table>
 
-<%= link_to '新しく投稿する', new_picture_path %>
+<footer>
+  <%= link_to '新しく投稿する', new_picture_path ,class:"foot"%>
+</footer>
